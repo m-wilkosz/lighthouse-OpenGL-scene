@@ -192,7 +192,7 @@ void renderScene(GLFWwindow *window) {
 	glDisable(GL_DEPTH_TEST);
 	glUseProgram(programSkyBox);
 	glUniformMatrix4fv(glGetUniformLocation(programSkyBox, "transformation"), 1, GL_FALSE,
-		(float*)&(createPerspectiveMatrix() * createCameraMatrix() * glm::translate(shipPos) * glm::eulerAngleY(glm::pi<float>())));
+		(float*)&(createPerspectiveMatrix() * createCameraMatrix() * glm::translate(shipPos)));
 	Core::SetActiveTexture(cubeMapTextureID, "skybox", programSkyBox, 0);
 	Core::DrawContext(cubeContext);
 	glEnable(GL_DEPTH_TEST);
