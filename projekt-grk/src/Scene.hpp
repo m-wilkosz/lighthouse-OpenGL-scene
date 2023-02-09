@@ -199,7 +199,7 @@ void renderScene(GLFWwindow *window) {
 
 	glUseProgram(programWater);
 	glUniform1f(glGetUniformLocation(programWater, "move"), sin(time)/1000);
-	drawObjectTexture(surfaceContext, glm::translate(glm::vec3(0.0f, -0.15f, 0.0f)) * glm::translate(shipPos) * glm::eulerAngleY(glm::pi<float>()), texture::water, texture::waterNormal, programWater);
+	drawObjectTexture(surfaceContext, glm::translate(glm::vec3(0.0f, -0.15f, 0.0f)) * glm::translate(shipPos), texture::water, texture::waterNormal, programWater);
 
 	drawObjectTexture(rocksContext, glm::translate(glm::vec3(10.0f, 0.0f, 4.0f)), texture::rocks, texture::rocksNormal, program);
 
