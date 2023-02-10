@@ -23,8 +23,7 @@ void main() {
 	vec3 N = normalize(texture2D(normalSampler, vecTex).xyz * 2.0f - 1.0f);
 	vec3 textureColor = texture2D(colorTexture, vecTex).xyz;
 
-	vec3 texture = mix(textureColor, N, 0.1f);
-	texture = vec3(1.0f) - exp(-texture * 1.5f);
+	vec3 texture = vec3(1.0f) - exp(-textureColor * 1.5f);
 
 	float firstDiffuse = max(0.0f, dot(N, firstL));
 	vec3 firstR = reflect(-firstL, N);
@@ -34,6 +33,6 @@ void main() {
 	vec3 secondR = reflect(-secondL, N);
 	float secondSpecular = pow(max(dot(V, secondR), 0.0f), 16);
 
-	outColor = vec4(texture/(0.5f*firstLightDist) * min(1.0f, (ambient + firstDiffuse + firstSpecular))
-				+ (texture/(0.5*secondLightDist) * min(1.0f, (ambient + secondDiffuse + secondSpecular))), 1.0f);
+	outColor = vec4(texture/(0.5f*firstLightDist) * (ambient + firstDiffuse + firstSpecular)
+				+ (texture/(0.5*secondLightDist) * (ambient + secondDiffuse + secondSpecular)), 1.0f);
 }
