@@ -349,8 +349,6 @@ void shutdown(GLFWwindow *window) {
 
 void processInput(GLFWwindow *window) {
 
-	glm::vec3 shipSide = glm::normalize(glm::cross(shipDir, glm::vec3(0.0f, 1.0f, 0.0f)));
-	glm::vec3 shipUp = glm::vec3(0.0f, 1.0f, 0.0f);
 	float angleSpeed = 0.05f;
 	float moveSpeed = 0.025f;
 	if (glfwGetKey(window, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
@@ -360,10 +358,6 @@ void processInput(GLFWwindow *window) {
 		shipPos += shipDir * moveSpeed;
 	if (glfwGetKey(window, GLFW_KEY_S) == GLFW_PRESS)
 		shipPos -= shipDir * moveSpeed;
-	if (glfwGetKey(window, GLFW_KEY_X) == GLFW_PRESS)
-		shipPos += shipSide * moveSpeed;
-	if (glfwGetKey(window, GLFW_KEY_Z) == GLFW_PRESS)
-		shipPos -= shipSide * moveSpeed;
 	if (glfwGetKey(window, GLFW_KEY_A) == GLFW_PRESS)
 		shipDir = glm::vec3(glm::eulerAngleY(angleSpeed) * glm::vec4(shipDir, 0.0f));
 	if (glfwGetKey(window, GLFW_KEY_D) == GLFW_PRESS)
