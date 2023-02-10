@@ -9,10 +9,7 @@ out vec4 outColor;
 
 void main() {
 
-	vec3 N = normalize(texture2D(normalSampler, vTex).xyz * 2.0f - 1.0f);
-	vec3 textureColor = texture2D(colorTexture, vTex).xyz;
-
-	vec3 texture = mix(textureColor, N, 0.1f);
+	vec3 texture = texture2D(colorTexture, vTex).xyz;
 
 	outColor = vec4(texture, 1.0f);
 }
