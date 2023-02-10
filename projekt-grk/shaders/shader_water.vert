@@ -43,5 +43,4 @@ void main() {
 	secondLightDirTS = TBN * secondL;
 
 	vecTex = vertexTexCoord;
-	vecTex.y = 1.0 - vecTex.y;
 }
