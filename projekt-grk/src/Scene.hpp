@@ -245,17 +245,17 @@ void renderScene(GLFWwindow *window) {
 		program);
 
 	drawObjectTexture(shipBottomContext,
-		glm::rotate(glm::translate(glm::vec3(22.0f - time/3, 0.0f, 0.0f)), -1.57f, glm::vec3(0.0f, 1.0f, 0.0f)),
+		glm::rotate(glm::translate(glm::vec3(19.0f - time/3, 0.0f, 0.0f)), -1.57f, glm::vec3(0.0f, 1.0f, 0.0f)),
 		texture::shipBottom,
 		texture::shipBottomNormal,
 		program);
 	drawObjectTexture(shipMiddleContext,
-		glm::rotate(glm::translate(glm::vec3(22.0f - time/3, 0.0f, 0.0f)), -1.57f, glm::vec3(0.0f, 1.0f, 0.0f)),
+		glm::rotate(glm::translate(glm::vec3(19.0f - time/3, 0.0f, 0.0f)), -1.57f, glm::vec3(0.0f, 1.0f, 0.0f)),
 		texture::shipMiddle,
 		texture::shipMiddleNormal,
 		program);
 	drawObjectTexture(shipTopContext,
-		glm::rotate(glm::translate(glm::vec3(22.0f - time/3, 0.0f, 0.0f)), -1.57f, glm::vec3(0.0f, 1.0f, 0.0f)),
+		glm::rotate(glm::translate(glm::vec3(19.0f - time/3, 0.0f, 0.0f)), -1.57f, glm::vec3(0.0f, 1.0f, 0.0f)),
 		texture::shipTop,
 		texture::shipTopNormal,
 		program);
