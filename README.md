@@ -1,5 +1,5 @@
 # Lighthouse OpenGL Scene
-[![](https://skills.thijs.gg/icons?i=c,cpp,visualstudio,blender)](https://skills.thijs.gg)
+[![](https://skillicons.dev/icons?i=c,cpp,visualstudio,blender)](https://skillicons.dev)
 
 ### Description
 This is an OpenGL project depicting a scene in which ships pass by the coast and a lighthouse.
